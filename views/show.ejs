@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+
+<section id="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-6">
+        <div class="card mb-sm-1">
+          <img class="card-img-top " src="<%= show.image %>">
+          <div class="card-body">
+            <h5 class="card-title"><label>Name : </label> <%= show.name %></h5>
+            <h5 class="card-title"><label>Age :</label> <%= show.age %></h5>
+            <h5 class="card-title"><label>Family:</label> <%= show.family %></h5>
+            <h5 class="card-title"><label>Food:</label> <%= show.food %></h5>
+            <h5 class="card-title"><label>Content:</label> <%= show.content %></h5>
+
+            <form action="/bookhome/<%= show._id %>?_method=delete" method="POST">
+              <button class="btn btn-outline-danger m-0">delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<%- include("partials/footer") %>

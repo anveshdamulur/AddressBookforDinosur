@@ -1,0 +1,35 @@
+<%- include("partials/header") %>
+
+
+
+<a href="/bookhome/new" class="btn text-right btn-primary  m-0 ">Add New Dinosur</a>
+
+<% show.forEach(function(add){ %>
+  
+<section id="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-3">
+        <div class="card mb-sm-1">
+          <img class="card-img-top " src="<%= add.image %>">
+
+          <div class="card-body">
+            <h5 class="card-title"><label>Name : </label> <%= add.name %></h5>
+            <h5 class="card-title"><label>Age :</label> <%= add.age %></h5>
+            <h5 class="card-title"><label>Family:</label> <%= add.family %></h5>
+            <h5 class="card-title"><label>Food:</label> <%= add.food %></h5>
+            <div class="buttons">
+              <a href="/bookhome/<%=add._id %>" class="btn btn-outline-success m-0">SHOW MORE</a>
+              <a href="/bookhome/<%=add._id %>/edit" class="btn btn-outline-success m-0">EDIT</a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<%});%>
+<%- include("partials/footer") %>

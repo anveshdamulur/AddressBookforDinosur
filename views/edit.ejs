@@ -1,0 +1,57 @@
+
+<%- include("partials/header") %>
+<h1 style="text-align: center;">Edit Dinosur</h1>
+<section id="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-6">
+                <div class="card mb-sm-1">
+
+                    <form action="/bookhome/<%= show._id %>?_method=PUT" method="POST">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Name</label>
+                            <input type="text" name="name" class="form-control" value="<%= show.name %>"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label>Age</label>
+
+                            <input type="number" name="age" class="form-control" value="<%= show.age %>"
+                               >
+                        </div>
+                        <div class="form-group">
+                            <label>Family</label>
+
+                            <input type="text" name="family" class="form-control" value="<%= show.family %>"
+                                >
+                        </div>
+                        <div class="form-group">
+                            <label>Food</label>
+                            <input type="text" name="food" class="form-control" value="<%= show.food %>"
+                               >
+                        </div>
+                        <div class="form-group">
+                            <label>Image</label>
+                            <input type="text" name="image" class="form-control" value="<%= show.image %>"
+                                >
+                        </div>
+                        <div class="form-group">
+                            <label>Content</label>
+                            <input type="text" name="content" class="form-control" value="<%= show.content %>"
+                              >
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+
+<%- include("partials/footer") %>
